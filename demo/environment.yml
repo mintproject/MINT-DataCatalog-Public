@@ -1,0 +1,3 @@
+name: data-catalog-interactive-notebooks
+dependencies:
+  - python=3.6
