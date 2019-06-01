@@ -1,2 +1,3 @@
-# MINT-DataCatalog-Public
-Public-facing aspects of data catalog, such as documentation, demos, tracking issues, and feature requests
+# MINT Data Catalog Primer and API Reference
+
+Currently deployed at: https://api.mint-data-catalog.org/
