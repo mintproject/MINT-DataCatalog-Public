@@ -28,3 +28,4 @@ Below you can find more detailed documentation about the individual concepts.
 [Variables](docs/variables.md)
 
 ### Resources
+[Resources](docs/resources.md)
