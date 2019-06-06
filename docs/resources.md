@@ -33,7 +33,8 @@ Data catalog currently supports the following resource types: **NetCDF**, **GeoT
 
 ```
 
-### Optional (and recommended) metadata
+### [Highly] recommended and optional metadata
+
 
 #### Arbitrary metadata
 In addition to the mandatory attributes above, data catalog also allows to provide arbitrary key-value metadata. You can provide any valid JSON meaning that the value can be a string, number, array, or another object.
@@ -55,7 +56,7 @@ The `metadata` object is where you should put other recommended metadata in orde
 #### Recommended metadata
 
 ##### temporal coverage [recommended]
-`temporal_coverage` provides the length and granularity information on temporal coverage of the resource. Dates follow [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format `YYYY-MM-DDThh:mm:ss`
+`temporal_coverage` provides the length and granularity information on temporal coverage of the resource. Dates follow [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format `YYYY-MM-DDThh:mm:ss`. Providing this information makes it possible to find the data using temporal queries (e.g., is there rainfall data for 2015-2017 years?)
 
 ```json
 {
@@ -74,7 +75,7 @@ The `metadata` object is where you should put other recommended metadata in orde
 ```
 
 ##### spatial coverage [recommended]
-`spatial_coverage` provides information about the spatial coverage of the resource (in WGS84 coordinate system). Here, `x` refers to longitude and `y` refers to latitude.
+`spatial_coverage` provides information about the spatial coverage of the resource (in WGS84 coordinate system). Here, `x` refers to longitude and `y` refers to latitude (in degrees). Providing this information makes it possible to find the data using geospatial queries (e.g., what kind of rainfall-related datasets are available for South Sudan?)
 
 
 ```json
@@ -106,12 +107,12 @@ The `metadata` object is where you should put other recommended metadata in orde
 }
 ```
 
-##### resource generated date [recommended]
-`generated_at` is a timestamp of when this particular resource was generated (as opposed to registered in the data catalog)
+##### resource created at date [recommended]
+`date_created` is a timestamp of when this particular resource was created (as opposed to registered in the data catalog)
 ```json
 {
 	"metadata": {
-		"generated_at": "2000-01-01T01:23:45"
+		"date_created": "2000-01-01T01:23:45"
 	}
 }
 ```
@@ -147,7 +148,7 @@ In this case, `dimensions` object for data catalog would look like
 We treat any non-integer value as "unlimited"
 
 
-#### geospatial metadata [recommended]
+##### geospatial metadata [recommended]
 `spatial_coverage` asks for the bounding box that describes the spatial extent (in WGS84 coordinates) that the data within the resource covers. But the actual data can be stored in a different spatial reference system (SRS). In order to visualize the contents of the resource on a map, we need to know the SRS, which dimensions map to latitude and longitude, and the spatial resolution of cell/pixel. So, for the example above with dimensions `"time"`, `"Y"`, `"X"`, and `"bnds"`, geospatial metadata might look something like this:
 
 ```json
@@ -231,12 +232,12 @@ We treat any non-integer value as "unlimited"
 }
 ```
 
-##### field separator [recommended]
-`field_separator` describes how fields are separated
+##### delimiter [recommended]
+`delimiter` describes how fields are separated
 ```json
 {
 	"metadata": {
-		"field_separator": ","
+		"delimiter": ","
 	}
 }
 ```
