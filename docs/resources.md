@@ -159,12 +159,12 @@ We treat any non-integer value as "unlimited"
 				"srid": "EPSG:4326"
 			},
 			"resolution": {
-				"latitude": {
+				"longitude": {
 					"dimension": "X",
 					"value": 10,
 					"units": "m"
 				},
-				"longitude": {
+				"latitude": {
 					"dimension": "Y",
 					"value": 10,
 					"units": "m"
