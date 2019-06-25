@@ -7,14 +7,15 @@ assignees: mariutzica
 
 ---
 
-** Dataset Name**: [name of the dataset]
-** Dataset Source**: [url where one can find more details about the dataset and its variables]
+**Dataset Name**: [name of the dataset]
+**Dataset Source**: [url where one can find more details about the dataset and its variables]
 **Sample File URL**: [url where one can download a sample file from]
 
-For variables that need to be linked to SVO, please provide variable's name (as it appears in the data file), its description, and its type (categorical or numerical)
-**Variables**:
-1. **_[variable_1_name]_**:
-  * **description**: [describe what this variable aims to measure]
-  * **type**: [categorical or numerical]
-2. **_[variable_2_name]_**:
+### **Variables**
+For variables that need to be linked to SVO, please provide variable's name (as it appears in the data file), its description, and its type (categorical or numerical).
+
+1. [variable_1_name]:
+   - _description_: [describe what this variable aims to measure]
+   - _type_: [categorical or numerical]
+2. [variable_2_name]:
   ...
