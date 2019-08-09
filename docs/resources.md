@@ -84,10 +84,10 @@ The `metadata` object is where you should put other recommended metadata in orde
 		"spatial_coverage": {
 			"type": "BoundingBox",
 		    "value": {
-		        "xmin": 33.9605286,
-		        "ymin": -118.4253354,
-		        "xmax": 33.9895077,
-		        "ymax": -118.4093589
+		        "xmin": -118.4253354,
+		        "ymin": 33.9605286,
+		        "xmax": -118.4093589,
+		        "ymax": 33.9895077
 		    }
 
 		}
