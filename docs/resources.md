@@ -62,8 +62,8 @@ The `metadata` object is where you should put other recommended metadata in orde
 {
 	"metadata": {
 		"temporal_coverage": {
-			"start_date": "1980-01-01T00:00:00",
-			"end_date": "1999-12-31T23:59:59",
+			"start_time": "1980-01-01T00:00:00",
+			"end_time": "1999-12-31T23:59:59",
 			"resolution": {
 				"value": 3,
 				"units": "year|month|week|day|hour|minute|second"
